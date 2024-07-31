@@ -1,0 +1,42 @@
+<div class="container">
+  <form #blockchainForm="ngForm" (ngSubmit)="saveBlockchain()" novalidate>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        [(ngModel)]="blockchain.name"
+        name="name"
+        #name="ngModel"
+        class="form-control"
+        id="name"
+        required
+        minlength="4"
+      />
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.hasError('required')" class="text-danger">
+          Name is required.
+        </div>
+        <div *ngIf="name.hasError('minlength')" class="text-danger">
+          Name must be at least 4 characters long.
+        </div>
+        <!-- Assuming you have a custom validator 'forbiddenName' -->
+        <div *ngIf="name.hasError('forbiddenName')" class="text-danger">
+          Name cannot be Bob.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="isDeleted">Is Deleted</label>
+      <select [(ngModel)]="blockchain.isDeleted" name="isDeleted" class="form-control" id="isDeleted" required>
+        <option [ngValue]="true">True</option>
+        <option [ngValue]="false">False</option>
+      </select>
+    </div>
+    
+
+    <button type="submit" class="btn btn-success" [disabled]="blockchainForm.invalid">Save</button>
+    
+    <button type="button" class="btn btn-secondary" (click)="goBack()">Back</button>
+
+  </form> 
+</div>

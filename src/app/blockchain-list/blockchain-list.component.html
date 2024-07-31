@@ -1,0 +1,30 @@
+<div class="container">
+  <button (click)="addBlockchain()" class="btn btn-success mb-3">New Blockchain</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Created Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let blockchain of blockchains">
+        <td>{{ blockchain.name }}</td>
+        <td>{{ blockchain.blockchainId }}</td>
+        <td>{{ blockchain.createdDate }}</td>
+        <td>
+          <!-- Button to view blockchain details -->
+          <button (click)="viewBlockchain(blockchain.blockchainId)" class="btn btn-primary">
+            View
+          </button>
+          <!-- Button to delete blockchain -->
+          <button (click)="deleteBlockchain(blockchain.blockchainId)" class="btn btn-danger">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

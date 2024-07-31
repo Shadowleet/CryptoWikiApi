@@ -1,0 +1,105 @@
+{
+  "assets": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "name": "BTC",
+      "symbolUrl": "src/BTC_image.jpg",
+      "marketCap": "john@example.com",
+      "description": "1234567890",
+      "website": "https://bitcoin.org/",
+      "launchDate": 123,
+      "blockchainId": 1,
+      "createdDate": 123,
+      "isDeleted": true
+    },
+    {
+      "id": "1",
+      "name": "doge",
+      "symbolUrl": "",
+      "marketCap": 0,
+      "website": "",
+      "launchDate": "2024-07-09T23:39:12.886Z",
+      "description": "dog",
+      "blockchainId": 0,
+      "createDate": "2024-07-09T23:39:12.886Z",
+      "isDeleted": false
+    },
+    {
+      "id": "3",
+      "name": "Ayush",
+      "symbolUrl": "",
+      "marketCap": 0,
+      "website": "",
+      "launchDate": "2024-07-18T17:56:36.509Z",
+      "description": "asdasdasd",
+      "blockchainId": 0,
+      "createDate": "2024-07-18T17:56:36.509Z",
+      "isDeleted": false
+    }
+  ],
+  "blockchain": [
+    {
+      "blockchainId": 1,
+      "name": "Blockchain 1",
+      "createdDate": "2024-07-11T00:00:00Z",
+      "isDeleted": false,
+      "id": "1160"
+    },
+    {
+      "blockchainId": 2,
+      "name": "Blockchain 2",
+      "createdDate": "2024-07-10T00:00:00Z",
+      "isDeleted": false,
+      "id": "47b4"
+    },
+    {
+      "id": "5679",
+      "blockchainId": 1,
+      "name": "solana",
+      "createdDate": "2024-07-18T17:56:48.873Z",
+      "isDeleted": false
+    },
+    {
+      "id": "4e61",
+      "blockchainId": 1,
+      "name": "solana",
+      "createdDate": "2024-07-18T23:01:00.569Z",
+      "isDeleted": false
+    },
+    {
+      "id": "1509",
+      "blockchainId": "0",
+      "name": "asd",
+      "createdDate": "2024-07-18T23:01:07.401Z",
+      "isDeleted": false
+    },
+    {
+      "id": "eba8",
+      "blockchainId": 1,
+      "name": "Ayush",
+      "createdDate": "2024-07-18T23:02:40.599Z",
+      "isDeleted": false
+    },
+    {
+      "id": "d22a",
+      "blockchainId": 1,
+      "name": "",
+      "createdDate": "2024-07-18T23:09:57.795Z",
+      "isDeleted": false
+    },
+    {
+      "id": "d204",
+      "blockchainId": 1,
+      "name": "",
+      "createdDate": "2024-07-18T23:22:08.475Z",
+      "isDeleted": false
+    },
+    {
+      "id": "eaf7",
+      "blockchainId": 1,
+      "name": "ASs",
+      "createdDate": "2024-07-18T23:22:37.704Z",
+      "isDeleted": false
+    }
+  ]
+}

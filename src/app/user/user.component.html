@@ -1,0 +1,71 @@
+<div class="container">
+  <form (ngSubmit)="saveUser()" #userForm="ngForm">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" [(ngModel)]="user.firstName" name="firstName" class="form-control" id="firstName" required minlength="4" pattern="^(?!user$).*$" #firstName="ngModel" >
+      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+        <div *ngIf="firstName.hasError('required')">
+          First Name is required. Please Enter the First Name
+        </div>
+        <div *ngIf="firstName.hasError('minlength')">
+          Name must be atleast 4 characters long.
+        </div>
+        <div *ngIf="firstName.hasError('pattern')">
+          Name cannot be user, Choose something else.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" [(ngModel)]="user.lastName" name="lastName" class="form-control" id="lastName" required minlength="4" pattern="^(?!user$).*$" #lastName="ngModel" >
+      <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+        <div *ngIf="lastName.hasError('required')">
+          Last Name is required. Please Enter the Last Name
+        </div>
+        <div *ngIf="lastName.hasError('minlength')">
+          Last Name must be atleast 4 characters long.
+        </div>
+        <div *ngIf="lastName.hasError('pattern')">
+          Name cannot be user, Choose something else.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        required
+        email
+        [(ngModel)]="user.email"
+        #email="ngModel"
+      />
+      <div
+        *ngIf="email.invalid && (email.dirty || email.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="email.hasError('required')">Email is required.</div>
+        <div *ngIf="email.hasError('email')">Email is not valid.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="isActive">Is Active</label>
+      <select [(ngModel)]="user.isActive" name="isActive" class="form-control" id="isActive" required #isActive="ngModel">
+        <option [value]="true">Yes</option>
+        <option [value]="false">No</option>
+      </select>
+      <div *ngIf="isActive.invalid && (isActive.dirty || isActive.touched)" class="alert alert-danger">
+        <div *ngIf="isActive.hasError('required')">Please select an option.</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">Save</button>
+    <button type="button" (click)="deleteUser()" class="btn btn-danger">Delete</button>
+    <button type="button" (click)="goBack()" class="btn btn-secondary">Back</button>
+  </form>
+</div>
