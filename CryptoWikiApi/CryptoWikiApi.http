@@ -1,0 +1,6 @@
+@CryptoWikiApi_HostAddress = http://localhost:5079
+
+GET {{CryptoWikiApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
